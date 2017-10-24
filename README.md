@@ -21,3 +21,7 @@ sendEamil.Run(user, to, password, host, subject, body, mailType string)
 - mailType 你发送的时候用的什么类型的body
     - html 小写字符
     - another 如果不是html的话 一律解释为plain
+
+## 捐赠
+
+[如果您希望帮助我更好的开源，也可以资助我一些资金](https://www.github.com/thomashuke/donate)
