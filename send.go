@@ -27,7 +27,7 @@ func sendToMail(user, password, host, to, subject, body, mailType string) error 
 		contentType = "Content-Type: text/plain" + "; charset=UTF-8" //
 		//Content-Type:text/plain; charset=UTF-8
 	}
-
+	// 将字符串 转换为 []byte 类型,因为在senMail中我们要传入一个[]byte类型的参数
 	msg := []byte("To: " + to + "\r\nFrom: " + user + "\r\nSubject: " + subject + "\r\n" + contentType + "\r\n\r\n" + body)
 	sendTo := strings.Split(to, ";") //使用；作为to中的分隔符。当然返回的是一个slice
 	err := smtp.SendMail(host, auth, user, sendTo, msg)
